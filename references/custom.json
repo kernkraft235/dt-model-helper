@@ -1,0 +1,242 @@
+[
+  {
+    "name" : "Real Dream",
+    "upcast_attention" : false,
+    "modifier" : "none",
+    "default_scale" : 8,
+    "version" : "v1",
+    "prefix" : "",
+    "file" : "real_dream_f16.ckpt",
+    "text_encoder" : "real_dream_clip_vit_l14_f16.ckpt",
+    "autoencoder" : "real_dream_vae_f16.ckpt"
+  },
+  {
+    "clip_encoder" : "ponyrealism_v22hyper4svae_clip_vit_l14_f16.ckpt",
+    "text_encoder" : "ponyrealism_v22hyper4svae_open_clip_vit_bigg14_f16.ckpt",
+    "default_scale" : 16,
+    "name" : "ponyRealism_V22Hyper4SVAE",
+    "version" : "sdxl_base_v0.9",
+    "upcast_attention" : false,
+    "prefix" : "score_9, score_8_up, score_7_up, photo, photorealistic, ",
+    "autoencoder" : "ponyrealism_v22hyper4svae_vae_f16.ckpt",
+    "modifier" : "none",
+    "file" : "ponyrealism_v22hyper4svae_f16.ckpt"
+  },
+  {
+    "prefix" : "",
+    "default_scale" : 16,
+    "autoencoder" : "sd3_vae_f16.ckpt",
+    "text_encoder" : "open_clip_vit_bigg14_f16.ckpt",
+    "objective" : {
+      "u" : {
+        "condition_scale" : 1000
+      }
+    },
+    "file" : "sd3_large_3.5_q6p.ckpt",
+    "name" : "SD3 Large 3.5 (8-bit)",
+    "upcast_attention" : false,
+    "version" : "sd3_large",
+    "clip_encoder" : "clip_vit_l14_f16.ckpt",
+    "t5_encoder" : "t5_xxl_encoder_q6p.ckpt"
+  },
+  {
+    "prefix" : "",
+    "default_scale" : 16,
+    "autoencoder" : "sdxl_vae_v1.0_f16.ckpt",
+    "text_encoder" : "realvisxl_v4.0_open_clip_vit_bigg14_f16.ckpt",
+    "file" : "realvisxl_v4.0_f16.ckpt",
+    "name" : "RealVisXL v4.0",
+    "upcast_attention" : false,
+    "version" : "sdxl_base_v0.9",
+    "modifier" : "none",
+    "clip_encoder" : "realvisxl_v4.0_clip_vit_l14_f16.ckpt"
+  },
+  {
+    "text_encoder" : "t5_xxl_encoder_q6p.ckpt",
+    "guidance_embed" : true,
+    "file" : "1095910_agfluxfillnsfwfp8_agfluxfillnsfwv17fp8_q8p.ckpt",
+    "objective" : {
+      "u" : {
+        "condition_scale" : 1000
+      }
+    },
+    "upcast_attention" : false,
+    "noise_discretization" : {
+      "rf" : {
+        "_0" : {
+          "sigma_min" : 0,
+          "sigma_max" : 1,
+          "condition_scale" : 1000
+        }
+      }
+    },
+    "clip_encoder" : "clip_vit_l14_f16.ckpt",
+    "high_precision_autoencoder" : true,
+    "autoencoder" : "flux_1_vae_f16.ckpt",
+    "modifier" : "inpainting",
+    "name" : "Agflux_Fill_NSFWFp8_agflux_Fill_NSFWV17Fp8",
+    "version" : "flux1",
+    "prefix" : "",
+    "default_scale" : 16,
+    "hires_fix_scale" : 24
+  },
+  {
+    "text_encoder" : "t5_xxl_encoder_q6p.ckpt",
+    "guidance_embed" : true,
+    "file" : "flux_1_dev_q8p.ckpt",
+    "objective" : {
+      "u" : {
+        "condition_scale" : 1000
+      }
+    },
+    "upcast_attention" : false,
+    "tea_cache_coefficients" : [
+      498.65164,
+      -283.78162,
+      55.85544,
+      -3.820214,
+      0.26423085
+    ],
+    "clip_encoder" : "clip_vit_l14_f16.ckpt",
+    "padded_text_encoding_length" : 512,
+    "high_precision_autoencoder" : true,
+    "autoencoder" : "flux_1_vae_f16.ckpt",
+    "name" : "FLUX.1 [dev]",
+    "version" : "flux1",
+    "prefix" : "",
+    "default_scale" : 16,
+    "hires_fix_scale" : 24
+  },
+  {
+    "text_encoder" : "qwen_2.5_vl_7b_f16.ckpt",
+    "file" : "qwen_image_edit_2509_bf16.ckpt",
+    "objective" : {
+      "u" : {
+        "condition_scale" : 1000
+      }
+    },
+    "upcast_attention" : false,
+    "is_bf16" : true,
+    "clip_encoder" : "qwen_2.5_vl_7b_vit_f16.ckpt",
+    "note" : "[Qwen Image Edit 2509](https:\/\/huggingface.co\/Qwen\/Qwen-Image-2509) is a state-of-the-art open-source image edit model excels at image edit tasks such as background alternation, style transfer, object removal etc. It is Apache 2.0-licensed and commercially friendly. The model is trained at multiple resolutions using a Flow Matching objective; trailing samplers yield the best results, with 30–50 sampling steps recommended. This is an update in Sep, 2025. The BF16 version is only compatible with macOS 15, iOS 18 and above.",
+    "high_precision_autoencoder" : false,
+    "autoencoder" : "qwen_image_vae_f16.ckpt",
+    "modifier" : "qwenimage_edit_plus",
+    "name" : "Qwen Image Edit 2509 (BF16, Exact)",
+    "version" : "qwen_image",
+    "prefix" : "",
+    "default_scale" : 16,
+    "hires_fix_scale" : 24
+  },
+  {
+    "text_encoder" : "t5_xxl_encoder_q6p.ckpt",
+    "guidance_embed" : true,
+    "file" : "flux_1_kontext_dev_q8p.ckpt",
+    "objective" : {
+      "u" : {
+        "condition_scale" : 1000
+      }
+    },
+    "upcast_attention" : false,
+    "tea_cache_coefficients" : [
+      498.65164,
+      -283.78162,
+      55.85544,
+      -3.820214,
+      0.26423085
+    ],
+    "clip_encoder" : "clip_vit_l14_f16.ckpt",
+    "padded_text_encoding_length" : 512,
+    "high_precision_autoencoder" : true,
+    "autoencoder" : "flux_1_vae_f16.ckpt",
+    "modifier" : "kontext",
+    "name" : "FLUX.1 Kontext [dev]",
+    "version" : "flux1",
+    "prefix" : "",
+    "default_scale" : 16,
+    "hires_fix_scale" : 24
+  },
+  {
+    "name" : "Illustrious-Realism-by-klaabu",
+    "prefix" : "",
+    "autoencoder" : "sdxl_vae_v1.0_f16.ckpt",
+    "version" : "sdxl_base_v0.9",
+    "upcast_attention" : false,
+    "text_encoder" : "illustrious_realism_by_klaabu_open_clip_vit_bigg14_f16.ckpt",
+    "file" : "illustrious_realism_by_klaabu_f16.ckpt",
+    "default_scale" : 16,
+    "clip_encoder" : "illustrious_realism_by_klaabu_clip_vit_l14_f16.ckpt",
+    "modifier" : "none"
+  },
+  {
+    "guidance_embed" : true,
+    "autoencoder" : "flux_1_vae_f16.ckpt",
+    "version" : "flux1",
+    "text_encoder" : "t5_xxl_encoder_q6p.ckpt",
+    "default_scale" : 16,
+    "noise_discretization" : {
+      "rf" : {
+        "_0" : {
+          "condition_scale" : 1000,
+          "sigma_min" : 0,
+          "sigma_max" : 1
+        }
+      }
+    },
+    "clip_encoder" : "clip_vit_l14_f16.ckpt",
+    "upcast_attention" : false,
+    "prefix" : "",
+    "name" : "Redcraft_CADSUpdated_JUN1_realreveal5",
+    "objective" : {
+      "u" : {
+        "condition_scale" : 1000
+      }
+    },
+    "hires_fix_scale" : 24,
+    "file" : "1550408_redcraftcadsupdatedjun1_realreveal5_q8p.ckpt",
+    "high_precision_autoencoder" : true,
+    "modifier" : "none"
+  },
+  {
+    "name" : "CyberIllustrious-CyberRealistic",
+    "prefix" : "",
+    "autoencoder" : "sdxl_vae_v1.0_f16.ckpt",
+    "version" : "sdxl_base_v0.9",
+    "upcast_attention" : false,
+    "text_encoder" : "cyberillustrious_cyberrealistic_open_clip_vit_bigg14_f16.ckpt",
+    "file" : "cyberillustrious_cyberrealistic_f16.ckpt",
+    "default_scale" : 16,
+    "clip_encoder" : "cyberillustrious_cyberrealistic_clip_vit_l14_f16.ckpt",
+    "modifier" : "none"
+  },
+  {
+    "name" : "Z Image Turbo 1.0 (Exact)",
+    "prefix" : "",
+    "autoencoder" : "flux_1_vae_f16.ckpt",
+    "objective" : {
+      "u" : {
+        "condition_scale" : 1000
+      }
+    },
+    "version" : "z_image",
+    "upcast_attention" : false,
+    "text_encoder" : "qwen_3_vl_4b_instruct_f16.ckpt",
+    "hires_fix_scale" : 24,
+    "note" : "[Z Image Turbo](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo)",
+    "file" : "z_image_turbo_1.0_f16.ckpt",
+    "default_scale" : 16,
+    "high_precision_autoencoder" : false
+  },
+  {
+    "name" : "Illustrij-GENv1",
+    "prefix" : "",
+    "autoencoder" : "sdxl_vae_v1.0_f16.ckpt",
+    "version" : "sdxl_base_v0.9",
+    "upcast_attention" : false,
+    "text_encoder" : "illustrij_genv1_open_clip_vit_bigg14_f16.ckpt",
+    "file" : "illustrij_genv1_f16.ckpt",
+    "default_scale" : 16,
+    "clip_encoder" : "illustrij_genv1_clip_vit_l14_f16.ckpt",
+    "modifier" : "none"
+  }
+]

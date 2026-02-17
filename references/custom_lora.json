@@ -1,0 +1,96 @@
+[
+  {
+    "is_lo_ha" : false,
+    "file" : "the_grinch_lora_f16.ckpt",
+    "name" : "The Grinch",
+    "prefix" : "the grinch, a green furry character. ",
+    "version" : "z_image"
+  },
+  {
+    "is_lo_ha" : false,
+    "file" : "2511_upscale2k_lora_f16.ckpt",
+    "name" : "2511-Upscale2K",
+    "prefix" : "upscale this picture to 4k resolution. ",
+    "version" : "qwen_image"
+  },
+  {
+    "is_lo_ha" : false,
+    "file" : "2511_object_adder_lora_f16.ckpt",
+    "name" : "2511-Object-Adder",
+    "prefix" : "add the {{object}} to the image while lighting preserving the background lighting and surrounding elements maintaining realism and original details ",
+    "version" : "qwen_image"
+  },
+  {
+    "weight" : {
+      "upper_bound" : 2.5,
+      "value" : 1,
+      "lower_bound" : -1.5
+    },
+    "is_lo_ha" : false,
+    "file" : "qwen_image_2512_lightning_4_step_v1.0_lora_f16.ckpt",
+    "name" : "Qwen Image 2512 Lightning 4-Step v1.0",
+    "prefix" : "",
+    "version" : "qwen_image"
+  },
+  {
+    "weight" : {
+      "upper_bound" : 2.5,
+      "value" : 1,
+      "lower_bound" : -1.5
+    },
+    "is_lo_ha" : false,
+    "file" : "flux_2_dev_turbo_lora_f16.ckpt",
+    "name" : "FLUX.2 [dev] Turbo",
+    "prefix" : "",
+    "version" : "flux2"
+  },
+  {
+    "is_lo_ha" : false,
+    "file" : "outpaint_lora_f16.ckpt",
+    "name" : "outpaint",
+    "prefix" : "fill the green spaces according to the image. ",
+    "version" : "flux2_4b"
+  },
+  {
+    "is_lo_ha" : false,
+    "file" : "image_repair_lora_f16.ckpt",
+    "name" : "Image Repair",
+    "prefix" : "make image high quality. ",
+    "version" : "flux2_4b"
+  },
+  {
+    "is_lo_ha" : false,
+    "file" : "amateur_selfie_4b_lora_f16.ckpt",
+    "name" : "amateur_selfie_4b",
+    "prefix" : "",
+    "version" : "flux2_4b"
+  },
+  {
+    "is_lo_ha" : false,
+    "file" : "realism_engine_v1_lora_f16.ckpt",
+    "name" : "Realism Engine v1",
+    "prefix" : "",
+    "version" : "flux2_9b"
+  },
+  {
+    "is_lo_ha" : false,
+    "file" : "upscale_portrait_9bklein_sevenof9_lora_f16.ckpt",
+    "name" : "upscale_portrait_9bklein_sevenof9",
+    "prefix" : "preserve the overall impression of the image. repair this portrait photo and refine. upscale image. ",
+    "version" : "flux2_9b"
+  },
+  {
+    "is_lo_ha" : false,
+    "file" : "hyperdetailedcoloredpencilz_lora_f16.ckpt",
+    "name" : "ColoredPencil-Pro",
+    "prefix" : "arsmjstyle, colored pencil hyperdetailed realism. ",
+    "version" : "z_image"
+  },
+  {
+    "is_lo_ha" : false,
+    "file" : "il_going_commando_lora_f16.ckpt",
+    "name" : "IL-going_commando",
+    "prefix" : "notwearing_underwear, ",
+    "version" : "sdxl_base_v0.9"
+  }
+]
