@@ -1,0 +1,3 @@
+[submodule "draw-things-community"]
+	path = draw-things-community
+	url = https://github.com/drawthingsai/draw-things-community.git

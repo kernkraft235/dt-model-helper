@@ -1,1 +1,0 @@
-/Users/gcole/AI/llm/sandbox/claude/drawthings/src/Apps/ModelConverter/Converter.swift
