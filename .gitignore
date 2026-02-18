@@ -6,7 +6,7 @@ draw-things-community/**
 *.dmg
 .env*
 .DS_Store
-
+junk/
 *cache*/
 
 testing/*/**
