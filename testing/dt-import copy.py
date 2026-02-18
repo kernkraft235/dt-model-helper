@@ -941,14 +941,8 @@ def process_file(
                 print("  [skip] no version selected")
                 return False
 
-    # LoRAConverter dumps every weight hash to stdout — only show on error
-    if result.returncode != 0 and result.stdout.strip():
-        # Trim to last 5 lines to avoid flooding the terminal
-        lines = result.stdout.strip().splitlines()
-        if len(lines) > 5:
-            print(f"  [out] ...({len(lines) - 5} lines omitted)")
-        for line in lines[-5:]:
-            print(f"  [out] {line}")
+    if result.stdout.strip():
+        print(f"  [out] {result.stdout.strip()}")
 
     # Find new .ckpt file
     after = set(output_dir.glob("*.ckpt")) if output_dir.exists() else set()
@@ -1069,9 +1063,6 @@ def main():
     parser = argparse.ArgumentParser(
         description="Draw Things LoRA unified import pipeline.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        usage="%(prog)s [options] FILE_OR_DIR [FILE_OR_DIR ...]\n"
-              "       %(prog)s --fix-only FILE_OR_DIR [...]\n"
-              "       %(prog)s --tag-only FILE_OR_DIR [...]",
         epilog="""
 pipeline modes (mutually exclusive):
   (default)       Full: SHA256 → CivitAI → fix → convert → register
@@ -1106,12 +1097,12 @@ config file:
     parser.add_argument("--non-interactive", action="store_true")
 
     mode_group = parser.add_mutually_exclusive_group()
-    mode_group.add_argument("--fix-only", action="store_true", help=argparse.SUPPRESS)
-    mode_group.add_argument("--tag-only", action="store_true", help=argparse.SUPPRESS)
+    mode_group.add_argument("--fix-only", action="store_true")
+    mode_group.add_argument("--tag-only", action="store_true")
 
-    parser.add_argument("--skip-fix", action="store_true", help=argparse.SUPPRESS)
-    parser.add_argument("--skip-civitai", action="store_true", help=argparse.SUPPRESS)
-    parser.add_argument("--skip-convert", action="store_true", help=argparse.SUPPRESS)
+    parser.add_argument("--skip-fix", action="store_true")
+    parser.add_argument("--skip-civitai", action="store_true")
+    parser.add_argument("--skip-convert", action="store_true")
 
     args = parser.parse_args()
 
